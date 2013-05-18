@@ -1,0 +1,34 @@
+public class Dice {
+  private int sRollcount = 0;
+  private int nDiceNumber = 1;
+  private int[] x = new int [10];
+
+  private int c = 0;
+public void DiceCount(int y){
+  nDiceNumber = y;
+	
+}
+  public Dice() {
+	  sRollcount = 0;
+	  nDiceNumber =1;
+  }
+  public int RollDice(){
+	 
+	  x[c] = 1 + (int) (Math.random()*6)* nDiceNumber;
+	  sRollcount = sRollcount + nDiceNumber;
+	  return x[c++] ;
+  }
+  public int Rollcount(){
+	  return sRollcount;
+  }
+  public int[] Rollhistoryarray(){
+	  return x;
+	  
+  }
+  public String RollCountMsg(){
+	  return "Roll Dices at this moment:" + sRollcount;
+  }
+ 
+
+  }
+
